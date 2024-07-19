@@ -11,13 +11,13 @@
     padding-top: 50px;
     padding-bottom: 50px;
   }
-  @media screen and (max-width: 520px) {
+  @media screen and (max-width: 440px) {
     background-position: -130px;
   }
 }
 
 .roadmap__container {
-  width: min(1620px, 100%);
+  width: min(1596px, 100%);
   margin-left: auto;
   margin-right: auto;
   padding-left: 28px;
