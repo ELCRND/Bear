@@ -747,6 +747,8 @@ body {
   .roadmap__title {
     margin-bottom: 20px;
     font-size: 24px;
+    text-align: center;
+    text-transform: uppercase;
   }
 }
 
