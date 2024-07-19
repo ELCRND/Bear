@@ -1,5 +1,7 @@
 .header {
   width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
   position: absolute;
   top: 44px;
   left: 0;
@@ -58,7 +60,19 @@
   gap: 20px;
 
   @media screen and (max-width: 840px) {
-    display: none;
+    padding-top: 0;
+    position: absolute;
+    top: 340px;
+    width: 191px;
+    height: 41px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid var(--istina-belyi);
+    border-radius: 80px;
+    backdrop-filter: blur(14px);
+    background: rgba(0, 0, 0, 0.2);
   }
 
   a {
@@ -69,17 +83,33 @@
       display: flex;
       justify-content: center;
       background-color: black;
+
+      @media screen and (max-width: 840px) {
+        width: 55px !important;
+        height: 22px;
+
+        svg {
+          width: 43px;
+          height: 22px;
+        }
+      }
     }
   }
 
   img {
     width: 30px;
     height: 30px;
+    translate: 0 -1px;
   }
 
   svg,
   img,
   a {
+    @media screen and (max-width: 840px) {
+      width: 22px;
+      height: 22px;
+    }
+
     &:hover {
       transition: scale 200ms ease;
       scale: 1.1;

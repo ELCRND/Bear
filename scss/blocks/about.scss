@@ -4,6 +4,8 @@
   background-image: url("../public/img/about/about_bg.jpg");
   background-size: cover;
   background-position: -3px 50%;
+  position: relative;
+  z-index: 1;
 
   @media screen and (max-width: 840px) {
     padding-top: 70px;
@@ -11,6 +13,22 @@
   }
   @media screen and (max-width: 520px) {
     background-position: -130px;
+  }
+
+  &:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.25);
+    z-index: -1;
+    display: none;
+
+    @media screen and (max-width: 840px) {
+      display: block;
+    }
   }
 }
 

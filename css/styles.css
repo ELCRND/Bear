@@ -193,6 +193,8 @@ body {
 }
 .header {
   width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
   position: absolute;
   top: 44px;
   left: 0;
@@ -250,7 +252,19 @@ body {
 }
 @media screen and (max-width: 840px) {
   .header__socials {
-    display: none;
+    padding-top: 0;
+    position: absolute;
+    top: 340px;
+    width: 191px;
+    height: 41px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid var(--istina-belyi);
+    border-radius: 80px;
+    backdrop-filter: blur(14px);
+    background: rgba(0, 0, 0, 0.2);
   }
 }
 .header__socials a:first-of-type {
@@ -261,9 +275,28 @@ body {
   justify-content: center;
   background-color: black;
 }
+@media screen and (max-width: 840px) {
+  .header__socials a:first-of-type {
+    width: 55px !important;
+    height: 22px;
+  }
+  .header__socials a:first-of-type svg {
+    width: 43px;
+    height: 22px;
+  }
+}
 .header__socials img {
   width: 30px;
   height: 30px;
+  translate: 0 -1px;
+}
+@media screen and (max-width: 840px) {
+  .header__socials svg,
+  .header__socials img,
+  .header__socials a {
+    width: 22px;
+    height: 22px;
+  }
 }
 .header__socials svg:hover,
 .header__socials img:hover,
@@ -497,6 +530,8 @@ body {
   background-image: url("../public/img/about/about_bg.jpg");
   background-size: cover;
   background-position: -3px 50%;
+  position: relative;
+  z-index: 1;
 }
 @media screen and (max-width: 840px) {
   .about {
@@ -507,6 +542,22 @@ body {
 @media screen and (max-width: 520px) {
   .about {
     background-position: -130px;
+  }
+}
+.about:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+  z-index: -1;
+  display: none;
+}
+@media screen and (max-width: 840px) {
+  .about:before {
+    display: block;
   }
 }
 
@@ -708,6 +759,7 @@ body {
 }
 @media screen and (max-width: 840px) {
   .roadmap__phases {
+    align-items: center;
     gap: 20px;
   }
 }
@@ -874,7 +926,7 @@ body {
   .footer {
     bottom: 0;
     padding-top: 33px;
-    padding-bottom: 23px;
+    padding-bottom: 0;
     border-radius: 0;
   }
 }
