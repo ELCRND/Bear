@@ -50,13 +50,21 @@
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
-    gap: 73px;
+    gap: 60px;
     border-radius: 20px;
   }
 }
 
 .steps__item {
   position: relative;
+
+  &:nth-of-type(2) {
+    .step__description {
+      @media screen and (max-width: 840px) {
+        max-width: 248px;
+      }
+    }
+  }
 }
 
 .step__title {
@@ -79,7 +87,7 @@
   color: var(--istina-belyi);
 
   @media screen and (max-width: 840px) {
-    max-width: 293px;
+    max-width: 268px;
     font-size: 14px;
   }
 }
@@ -98,9 +106,12 @@
 
 .buy__img {
   position: absolute;
-  bottom: 80px;
-  right: 0px;
+  bottom: 50px;
+  right: 86px;
 
+  @media screen and (max-width: 1440px) {
+    right: -60px;
+  }
   @media screen and (max-width: 840px) {
     display: none;
   }

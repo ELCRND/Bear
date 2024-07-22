@@ -391,10 +391,12 @@ body {
 }
 
 .home__img {
+  width: 760px;
+  height: 646px;
   position: absolute;
   bottom: -60px;
   left: 50%;
-  translate: -50% 0;
+  translate: -53% 0;
 }
 @media screen and (max-width: 840px) {
   .home__img {
@@ -427,7 +429,7 @@ body {
   justify-content: center;
   align-items: center;
   background: rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(11px);
+  backdrop-filter: blur(5px);
   font-family: var(--font-family);
   font-weight: 700;
   font-size: 24px;
@@ -453,11 +455,12 @@ body {
   height: 66px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 47px;
+  padding-right: 34px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 4px;
   border: 2px solid #fff;
   border-radius: 15px;
   backdrop-filter: blur(4px);
@@ -469,21 +472,32 @@ body {
   .home__token {
     width: 250px;
     height: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+    gap: 10px;
     border: 1px solid var(--istina-belyi);
     border-radius: 8px;
   }
 }
 
 .token__code {
+  font-weight: 600;
+  font-size: 24px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
+@media screen and (max-width: 840px) {
+  .token__code {
+    font-size: 14px;
+  }
+}
 
 @media screen and (max-width: 1279px) {
   .token__copy {
-    width: 20px;
-    height: 20px;
+    width: 28px;
+    height: 28px;
+    translate: 0 2px;
   }
 }
 
@@ -783,6 +797,7 @@ body {
   .phase {
     padding: 12px;
     font-size: 14px;
+    text-align: center;
   }
 }
 
@@ -854,13 +869,18 @@ body {
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
-    gap: 73px;
+    gap: 60px;
     border-radius: 20px;
   }
 }
 
 .steps__item {
   position: relative;
+}
+@media screen and (max-width: 840px) {
+  .steps__item:nth-of-type(2) .step__description {
+    max-width: 248px;
+  }
 }
 
 .step__title {
@@ -885,7 +905,7 @@ body {
 }
 @media screen and (max-width: 840px) {
   .step__description {
-    max-width: 293px;
+    max-width: 268px;
     font-size: 14px;
   }
 }
@@ -905,8 +925,13 @@ body {
 
 .buy__img {
   position: absolute;
-  bottom: 80px;
-  right: 0px;
+  bottom: 50px;
+  right: 86px;
+}
+@media screen and (max-width: 1440px) {
+  .buy__img {
+    right: -60px;
+  }
 }
 @media screen and (max-width: 840px) {
   .buy__img {
